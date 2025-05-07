@@ -1,0 +1,35 @@
+# Build artifacts
+build/
+bin/
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
+*.a
+*.lib
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Backup / Editor files
+*~
+*.swp
+*.tmp
+*.bak
+.DS_Store
+
+# VSCode or CLion settings (optional)
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Generated files
+compile_commands.json
+
