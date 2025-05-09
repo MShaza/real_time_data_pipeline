@@ -14,16 +14,17 @@ int main(){
     Producer.start();
     Consumer.start();
 
-    std::this_thread::sleep_for(std::chrono::seconds(10));
-    running = false;
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    // Now stop everything
+    {
+        std::lock_guard<std::mutex> lock(mtx);
+        running = false;
+    }
+    cv.notify_all(); // wake up any waiting threads
 
     Producer.stop();
     Consumer.stop();
-    while(!buffer.empty()){
-        std::cout<<"Main thread recieve: " << buffer.front() << std::endl;
-        buffer.pop();
-    }
-
+    
 
 
     return 0;

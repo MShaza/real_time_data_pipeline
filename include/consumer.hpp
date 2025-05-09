@@ -7,6 +7,7 @@
 #include <condition_variable>
 #include <mutex>
 #include <string>
+#include <iostream>
 
  class Consumer{
     private:

@@ -1,6 +1,6 @@
 #ifndef PRODUCER__H
 #define PRODUCER__H
-
+#include <iostream>
 #include <thread>
 #include <atomic>
 #include <queue>

@@ -17,8 +17,10 @@ void Producer::run(){
             std::lock_guard<std::mutex> lock(mtx);
             buffer.push(oss.str());
         }
+    std::cout << "[Producer Thread ID: " << std::this_thread::get_id()
+                  << "] Produced: " << oss.str() << std::endl;
         cv.notify_one();
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }
 
