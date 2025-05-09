@@ -18,6 +18,8 @@ include_directories(include)
 
 add_executable(realTimePipeline
     src/main.cpp    
+    src/producer.cpp
+    src/consumer.cpp
 )
 
 # enable_testing()
